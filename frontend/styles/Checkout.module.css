@@ -1,0 +1,302 @@
+.checkoutPage {
+    padding: 3rem 0;
+    min-height: 60vh;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.checkoutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.orderSummary,
+.qrPaymentSection {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px var(--shadow);
+}
+
+.orderSummary h2,
+.qrPaymentSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.orderNumber {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.booksList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.bookItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.bookItem h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+
+.bookItem p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.bookPrice {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.totalSection {
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--border);
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    color: var(--text-secondary);
+}
+
+.grandTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    border-top: 2px solid var(--border);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* QR Payment Section */
+.qrHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.qrHeader h2 {
+    font-size: 1.75rem;
+    margin: 0.75rem 0 0.5rem;
+}
+
+.iconPending {
+    font-size: 3rem;
+    color: var(--primary);
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.paymentRef {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: monospace;
+    background: var(--bg-secondary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.qrCodeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(168, 85, 247, 0.05));
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+    border: 2px dashed var(--primary);
+}
+
+.qrWrapper {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.amountBadge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.amountLabel {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.amountValue {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.paymentDetails {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+}
+
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detailItem:last-child {
+    border-bottom: none;
+}
+
+.detailLabel {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.detailValue {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.copyBtn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+.instructions {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1));
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--success);
+}
+
+.instructions h4 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.instructions ol {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.instructions li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.instructions strong {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.secureNote {
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 968px) {
+    .checkoutContent {
+        grid-template-columns: 1fr;
+    }
+
+    .qrCodeContainer {
+        padding: 1.5rem;
+    }
+
+    .qrWrapper svg {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .amountValue {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .pageTitle {
+        font-size: 2rem;
+    }
+
+    .orderSummary,
+    .qrPaymentSection {
+        padding: 1.5rem;
+    }
+
+    .qrWrapper svg {
+        width: 180px !important;
+        height: 180px !important;
+    }
+}

@@ -1,0 +1,201 @@
+.navbar {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    box-shadow: 0 2px 10px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white;
+}
+
+.navContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.logoIcon {
+    font-size: 1.8rem;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.navLinks a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.navRight {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cartIcon {
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.cartIcon:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.cartBadge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--secondary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.4rem;
+    border-radius: 50%;
+    min-width: 20px;
+    text-align: center;
+}
+
+.userMenu {
+    position: relative;
+}
+
+.userButton {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+}
+
+.userButton:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    box-shadow: 0 10px 25px var(--shadow);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+}
+
+.userMenu:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown a,
+.dropdown button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    color: var(--text-primary);
+    text-align: left;
+    background: transparent;
+    border-bottom: 1px solid var(--border);
+}
+
+.dropdown a:last-child,
+.dropdown button:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+    background: var(--bg-secondary);
+    color: var(--primary);
+}
+
+.authButtons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobileToggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    background: transparent;
+    padding: 0.5rem;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobileMenu a,
+.mobileMenu button {
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    text-align: left;
+    background: transparent;
+    width: 100%;
+}
+
+.mobileMenu a:hover,
+.mobileMenu button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+
+    .navLinks,
+    .authButtons {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: block;
+    }
+
+    .mobileMenu {
+        display: flex;
+    }
+}

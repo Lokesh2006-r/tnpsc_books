@@ -1,0 +1,101 @@
+.booksPage {
+    padding: 3rem 0;
+    min-height: 60vh;
+}
+
+.pageTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.filters {
+    margin-bottom: 3rem;
+}
+
+.searchForm {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+}
+
+.searchInput:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.categories {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categoryBtn {
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    background: white;
+    color: var(--text-secondary);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.categoryBtn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.categoryBtn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pageInfo {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.noBooks {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .pageTitle {
+        font-size: 2rem;
+    }
+
+    .searchForm {
+        flex-direction: column;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

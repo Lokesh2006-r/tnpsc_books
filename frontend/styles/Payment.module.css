@@ -1,0 +1,200 @@
+.paymentPage {
+    padding: 3rem 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.paymentCard {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.paymentHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.iconPending,
+.iconSuccess,
+.iconError {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.iconPending {
+    color: var(--info);
+    animation: spin 2s linear infinite;
+}
+
+.iconSuccess {
+    color: var(--success);
+}
+
+.iconError {
+    color: var(--error);
+}
+
+.paymentHeader h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.paymentHeader p {
+    color: var(--text-secondary);
+}
+
+.paymentInfo {
+    background: var(--bg-secondary);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.infoRow:last-child {
+    border-bottom: none;
+}
+
+.amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.upiSection {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.upiSection h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.qrContainer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1.5rem;
+}
+
+.upiDetails {
+    margin-top: 1.5rem;
+}
+
+.upiIdContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.upiId {
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: monospace;
+    color: var(--primary);
+}
+
+.copyBtn {
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copyBtn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+.paymentSteps {
+    margin-top: 2rem;
+    text-align: left;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--primary);
+}
+
+.paymentSteps h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.paymentSteps ol {
+    margin-left: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.paymentSteps li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.successMessage,
+.errorMessage {
+    text-align: center;
+}
+
+.successMessage p,
+.errorMessage p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.actionButtons button {
+    flex: 1;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .paymentCard {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .paymentHeader h1 {
+        font-size: 1.75rem;
+    }
+
+    .actionButtons {
+        flex-direction: column;
+    }
+
+    .actionButtons button {
+        width: 100%;
+    }
+}

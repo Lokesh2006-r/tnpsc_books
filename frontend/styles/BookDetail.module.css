@@ -1,0 +1,127 @@
+.bookDetail {
+    padding: 3rem 0;
+    min-height: 60vh;
+}
+
+.detailGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.coverSection {
+    position: sticky;
+    top: 100px;
+}
+
+.coverImage {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.author {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.category,
+.format,
+.pages {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.category {
+    background: var(--primary-light);
+    color: white;
+}
+
+.format {
+    background: var(--secondary);
+    color: white;
+}
+
+.pages {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.additionalInfo {
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.infoItem {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.infoItem strong {
+    color: var(--text-primary);
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 968px) {
+    .detailGrid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .coverSection {
+        position: static;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .price {
+        font-size: 2rem;
+    }
+}
