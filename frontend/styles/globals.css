@@ -86,8 +86,11 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .mobile-nav-spacer {
