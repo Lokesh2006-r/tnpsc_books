@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import Footer from './Footer';
+import BottomNav from './BottomNav';
 
 export default function Layout({ children }) {
     return (
@@ -9,6 +10,9 @@ export default function Layout({ children }) {
                 {children}
             </main>
             <Footer />
+            <BottomNav />
+            {/* Spacer for bottom nav on mobile */}
+            <div className="mobile-nav-spacer"></div>
         </div>
     );
 }

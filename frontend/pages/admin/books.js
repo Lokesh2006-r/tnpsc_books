@@ -126,24 +126,24 @@ export default function ManageBooks() {
                                     <tbody>
                                         {filteredBooks.map(book => (
                                             <tr key={book._id}>
-                                                <td>
+                                                <td data-label="Cover">
                                                     <img
                                                         src={`${API_URL}/${book.coverImage}`}
                                                         alt={book.title}
                                                         className={styles.bookThumb}
                                                     />
                                                 </td>
-                                                <td><strong>{book.title}</strong></td>
-                                                <td>{book.author}</td>
-                                                <td>{book.category}</td>
-                                                <td>₹{book.price}</td>
-                                                <td>
+                                                <td data-label="Title"><strong>{book.title}</strong></td>
+                                                <td data-label="Author">{book.author}</td>
+                                                <td data-label="Category">{book.category}</td>
+                                                <td data-label="Price">₹{book.price}</td>
+                                                <td data-label="Format">
                                                     <span className={styles.formatBadge}>
                                                         {book.fileFormat?.toUpperCase() || 'PDF'}
                                                     </span>
                                                 </td>
-                                                <td>{book.totalSales || 0}</td>
-                                                <td>
+                                                <td data-label="Sales">{book.totalSales || 0}</td>
+                                                <td data-label="Status">
                                                     <button
                                                         onClick={() => handleToggleAvailability(book._id, book.isAvailable)}
                                                         className={`${styles.statusBadge} ${book.isAvailable ? styles.active : styles.inactive}`}
@@ -151,7 +151,7 @@ export default function ManageBooks() {
                                                         {book.isAvailable ? 'Active' : 'Inactive'}
                                                     </button>
                                                 </td>
-                                                <td>
+                                                <td data-label="Actions">
                                                     <div className={styles.actionButtons}>
                                                         <button
                                                             onClick={() => handleDownload(book._id, book.title)}

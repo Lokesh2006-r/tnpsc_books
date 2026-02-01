@@ -104,25 +104,45 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 3rem 0;
+    }
+
     .heroTitle {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .heroSubtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 0 1rem;
+        /* Prevent edge touching */
     }
 
     .heroButtons {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        /* Full width buttons */
+        padding: 0 1rem;
     }
 
     .heroButtons .btn {
         width: 100%;
-        max-width: 300px;
+        max-width: none;
+        /* remove max-width limit */
+    }
+
+    .features,
+    .featured {
+        padding: 2.5rem 0;
     }
 
     .sectionTitle {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .featureGrid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
 }

@@ -153,38 +153,31 @@
     gap: 1rem;
 }
 
+/* Mobile styling updates */
 .mobileToggle {
     display: none;
     font-size: 1.5rem;
     color: white;
     background: transparent;
     padding: 0.5rem;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.mobileToggle:active {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .mobileMenu {
     display: none;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.mobileMenu a,
-.mobileMenu button {
-    color: white;
-    padding: 0.75rem 1rem;
-    border-radius: var(--radius-md);
-    text-align: left;
-    background: transparent;
-    width: 100%;
-}
-
-.mobileMenu a:hover,
-.mobileMenu button:hover {
-    background: rgba(255, 255, 255, 0.1);
+    /* Hidden by default */
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+        /* Slightly compact on mobile */
+    }
 
     .navLinks,
     .authButtons {
@@ -197,5 +190,52 @@
 
     .mobileMenu {
         display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        /* Use theme background */
+        padding: 1rem;
+        box-shadow: 0 4px 20px var(--shadow);
+        border-top: 1px solid var(--border);
+        animation: slideDown 0.3s ease-out forwards;
+        z-index: 999;
+    }
+
+    .mobileMenu a,
+    .mobileMenu button {
+        color: var(--text-primary);
+        padding: 1rem;
+        border-radius: var(--radius-md);
+        text-align: left;
+        background: var(--bg-secondary);
+        width: 100%;
+        font-weight: 600;
+        font-size: 1rem;
+        display: flex;
+        /* alignment */
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .mobileMenu a:hover,
+    .mobileMenu button:hover {
+        background: var(--primary);
+        color: white;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
