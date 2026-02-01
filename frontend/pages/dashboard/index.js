@@ -9,7 +9,7 @@ import styles from '../../styles/Dashboard.module.css';
 
 export default function Dashboard() {
     const router = useRouter();
-    const { user } = useAuth();
+    const { user, isAdmin } = useAuth();
     const [stats, setStats] = useState({
         purchasedBooks: 0,
         totalOrders: 0,
@@ -158,7 +158,7 @@ export default function Dashboard() {
                                     >
                                         <FiArrowRight /> Browse Books
                                     </button>
-                                    {user?.role === 'admin' && (
+                                    {isAdmin && (
                                         <button
                                             onClick={() => router.push('/admin')}
                                             className="btn btn-secondary"
