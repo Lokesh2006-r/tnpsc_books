@@ -29,15 +29,15 @@ export default function BottomNav() {
 
             {isAuthenticated ? (
                 <>
-                    {isAdmin ? (
+                    <Link href="/dashboard" className={`${styles.navItem} ${isActive('/dashboard') ? styles.active : ''}`}>
+                        <FiUser size={24} />
+                        <span>Profile</span>
+                    </Link>
+
+                    {isAdmin && (
                         <Link href="/admin" className={`${styles.navItem} ${isActive('/admin') ? styles.active : ''}`}>
                             <FiSettings size={24} />
                             <span>Admin</span>
-                        </Link>
-                    ) : (
-                        <Link href="/dashboard" className={`${styles.navItem} ${isActive('/dashboard') ? styles.active : ''}`}>
-                            <FiUser size={24} />
-                            <span>Profile</span>
                         </Link>
                     )}
                 </>
