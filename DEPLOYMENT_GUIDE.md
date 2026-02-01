@@ -29,7 +29,8 @@ Here is the step-by-step fix.
 2.  Go to **Settings** -> **Environment Variables**.
 3.  Find `NEXT_PUBLIC_API_URL`.
 4.  Click **Edit** (or Add New if it's missing).
-5.  **Value**: Paste your NEW Backend URL from Render (e.g., `https://tnpsc-backend.onrender.com`).
+5.  **Value**: Paste your NEW Backend URL from Render:
+    `https://tnpsc-books.onrender.com`
     *   *Note: Do not add a trailing slash `/` at the end.*
 6.  Click **Save**.
 7.  Go to **Deployments** tab.
