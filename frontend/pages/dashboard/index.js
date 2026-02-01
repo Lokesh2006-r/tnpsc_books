@@ -168,12 +168,11 @@ export default function Dashboard() {
                                         </button>
                                     )}
                                 </div>
-                            </div>
-                    </>
+                            </>
                         )}
+                    </div>
                 </div>
-            </div>
-        </Layout>
-        </ProtectedRoute >
+            </Layout>
+        </ProtectedRoute>
     );
 }
