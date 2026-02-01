@@ -46,7 +46,7 @@ export default function Signup() {
     return (
         <Layout>
             <div className={styles.authPage}>
-                <div className={styles.authCard}>
+                <div className={styles.authCard} style={{ background: 'var(--bg-card)' }}>
                     <h1 className={styles.authTitle}>Create Account</h1>
                     <p className={styles.authSubtitle}>Sign up to get started</p>
 
