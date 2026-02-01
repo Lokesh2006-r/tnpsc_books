@@ -4,7 +4,7 @@ import Layout from '../../components/Layout';
 import ProtectedRoute from '../../components/ProtectedRoute';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../utils/api';
-import { FiBook, FiShoppingBag, FiDownload, FiArrowRight } from 'react-icons/fi';
+import { FiBook, FiShoppingBag, FiDownload, FiArrowRight, FiSettings } from 'react-icons/fi';
 import styles from '../../styles/Dashboard.module.css';
 
 export default function Dashboard() {
@@ -135,37 +135,45 @@ export default function Dashboard() {
                                 </div>
 
                                 {/* Quick Actions */}
-                                <div className="card" style={{ padding: '2rem' }}>
-                                    <h2 style={{ marginBottom: '1.5rem' }}>Quick Actions</h2>
-                                    <div className="grid grid-3">
+                                <h2 style={{ marginBottom: '1.5rem' }}>Quick Actions</h2>
+                                <div className="grid grid-3">
+                                    <button
+                                        onClick={() => router.push('/dashboard/library')}
+                                        className="btn btn-primary"
+                                        style={{ width: '100%' }}
+                                    >
+                                        <FiBook /> My Library
+                                    </button>
+                                    <button
+                                        onClick={() => router.push('/dashboard/orders')}
+                                        className="btn btn-outline"
+                                        style={{ width: '100%' }}
+                                    >
+                                        <FiShoppingBag /> Order History
+                                    </button>
+                                    <button
+                                        onClick={() => router.push('/books')}
+                                        className="btn btn-outline"
+                                        style={{ width: '100%' }}
+                                    >
+                                        <FiArrowRight /> Browse Books
+                                    </button>
+                                    {user?.role === 'admin' && (
                                         <button
-                                            onClick={() => router.push('/dashboard/library')}
-                                            className="btn btn-primary"
-                                            style={{ width: '100%' }}
+                                            onClick={() => router.push('/admin')}
+                                            className="btn btn-secondary"
+                                            style={{ width: '100%', background: 'linear-gradient(135deg, #4f46e5, #4338ca)' }}
                                         >
-                                            <FiBook /> My Library
+                                            <FiSettings /> Admin Panel
                                         </button>
-                                        <button
-                                            onClick={() => router.push('/dashboard/orders')}
-                                            className="btn btn-outline"
-                                            style={{ width: '100%' }}
-                                        >
-                                            <FiShoppingBag /> Order History
-                                        </button>
-                                        <button
-                                            onClick={() => router.push('/books')}
-                                            className="btn btn-outline"
-                                            style={{ width: '100%' }}
-                                        >
-                                            <FiArrowRight /> Browse Books
-                                        </button>
-                                    </div>
+                                    )}
                                 </div>
-                            </>
+                            </div>
+                    </>
                         )}
-                    </div>
                 </div>
-            </Layout>
-        </ProtectedRoute>
+            </div>
+        </Layout>
+        </ProtectedRoute >
     );
 }
